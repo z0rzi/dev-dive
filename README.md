@@ -14,3 +14,12 @@ Each session will be divided in 3 parts:
 Disclaimers:
 - This is a study group, not a class or a course. 
 - Some topics might be too advanced for absolute beginners. Although all levels are welcome, make sure to acquire a basic understanding of the topic before coming.
+
+
+---
+
+### Ideas for future events:
+- Use of LLMs in programming
+- Functional programming VS OOP
+- Javascript performances and memory
+- The event loop
