@@ -21,7 +21,7 @@ Together, these concepts empower you to create versatile and modular code. These
   https://www.youtube.com/watch?v=GCraGHx6gso (54 mins)
   https://www.youtube.com/watch?v=v6tpISNjHf8 (12 mins)
 
-## Task
+## Kata
 
 You are provided with a simple back-end for managing users.
 
@@ -29,6 +29,21 @@ The code follows the MVC pattern, and is mainly divided in 3 files:
 - `userRoutes` - Where the routes are defined
 - `userController` - Where the client input is verified and parsed
 - `userModel` - Where the Database is accessed
+
+
+To start the application :
+```bash
+npm i
+npm run build
+npm run start
+```
+
+To test your app, you can use a client, like Postman, or use directly curl:
+```bash
+curl -X GET -H "user-id: 3" http://localhost:3000/users/2
+curl -X POST -H "user-id: 3" -H "Content-Type: application/json" -d '{"name": "Orlando Blum", "age": 49, "email": "orlando@blum.com", "password": "NotAPassword"}' http://localhost:3000/users
+```
+
 
 **Your are only allowed to change the code in the userController file** (and to add new files/classes if necessary)
 

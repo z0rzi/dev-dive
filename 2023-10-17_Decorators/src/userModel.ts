@@ -57,7 +57,7 @@ export default class UserModel {
    * @returns The newly created user
    */
   createUser(name: string, age: number, email: string, password: string): User | undefined {
-    let userId = 0;
+    let userId = 1;
 
     // Finding a valid ID for the new user
     const allIds = this.users.map((user) => user.id);
