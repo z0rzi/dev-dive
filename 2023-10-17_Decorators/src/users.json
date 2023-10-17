@@ -1,0 +1,389 @@
+[
+  {
+    "id": 1,
+    "isAdmin": false,
+    "name": "John Doe",
+    "age": 30,
+    "email": "john.doe@example.com",
+    "password": "password123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "isAdmin": false,
+    "name": "Jane Smith",
+    "age": 28,
+    "email": "jane.smith@example.com",
+    "password": "securePassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "isAdmin": true,
+    "name": "Alice Johnson",
+    "age": 25,
+    "email": "alice.johnson@example.com",
+    "password": "mySecretPass",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "isAdmin": false,
+    "name": "Bob Williams",
+    "age": 35,
+    "email": "bob.williams@example.com",
+    "password": "topSecret",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "isAdmin": false,
+    "name": "Ella Brown",
+    "age": 32,
+    "email": "ella.brown@example.com",
+    "password": "myPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "isAdmin": false,
+    "name": "David Lee",
+    "age": 27,
+    "email": "david.lee@example.com",
+    "password": "secret123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 7,
+    "isAdmin": false,
+    "name": "Grace Miller",
+    "age": 31,
+    "email": "grace.miller@example.com",
+    "password": "mySecurePass",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 8,
+    "isAdmin": false,
+    "name": "Michael Davis",
+    "age": 29,
+    "email": "michael.davis@example.com",
+    "password": "securePass123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 9,
+    "isAdmin": false,
+    "name": "Olivia Moore",
+    "age": 24,
+    "email": "olivia.moore@example.com",
+    "password": "myPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 10,
+    "isAdmin": false,
+    "name": "James Wilson",
+    "age": 33,
+    "email": "james.wilson@example.com",
+    "password": "topSecret123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 11,
+    "isAdmin": false,
+    "name": "Sophia Martin",
+    "age": 26,
+    "email": "sophia.martin@example.com",
+    "password": "secretPass",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 12,
+    "isAdmin": false,
+    "name": "Liam Anderson",
+    "age": 34,
+    "email": "liam.anderson@example.com",
+    "password": "myPass123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 13,
+    "isAdmin": true,
+    "name": "Emily Taylor",
+    "age": 30,
+    "email": "emily.taylor@example.com",
+    "password": "securePassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 14,
+    "isAdmin": false,
+    "name": "Noah White",
+    "age": 28,
+    "email": "noah.white@example.com",
+    "password": "mySecret123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 15,
+    "isAdmin": false,
+    "name": "Ava Harris",
+    "age": 25,
+    "email": "ava.harris@example.com",
+    "password": "topPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 16,
+    "isAdmin": false,
+    "name": "Liam Anderson",
+    "age": 27,
+    "email": "liam.anderson@example.com",
+    "password": "secretPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 17,
+    "isAdmin": false,
+    "name": "Avery Moore",
+    "age": 31,
+    "email": "avery.moore@example.com",
+    "password": "mySecretPass123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 18,
+    "isAdmin": false,
+    "name": "Ethan Jackson",
+    "age": 29,
+    "email": "ethan.jackson@example.com",
+    "password": "securePass123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 19,
+    "isAdmin": true,
+    "name": "Charlotte Clark",
+    "age": 24,
+    "email": "charlotte.clark@example.com",
+    "password": "mySecretPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 20,
+    "isAdmin": false,
+    "name": "Mason Baker",
+    "age": 33,
+    "email": "mason.baker@example.com",
+    "password": "topSecretPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 21,
+    "isAdmin": true,
+    "name": "Scarlett Young",
+    "age": 26,
+    "email": "scarlett.young@example.com",
+    "password": "myTopPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 22,
+    "isAdmin": true,
+    "name": "Lucas Scott",
+    "age": 34,
+    "email": "lucas.scott@example.com",
+    "password": "topSecretPass123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 23,
+    "isAdmin": false,
+    "name": "Amelia King",
+    "age": 30,
+    "email": "amelia.king@example.com",
+    "password": "secureTopPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 24,
+    "isAdmin": false,
+    "name": "Oliver Adams",
+    "age": 28,
+    "email": "oliver.adams@example.com",
+    "password": "mySecretTop123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 25,
+    "isAdmin": false,
+    "name": "Harper Evans",
+    "age": 25,
+    "email": "harper.evans@example.com",
+    "password": "topPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 26,
+    "isAdmin": true,
+    "name": "William Wright",
+    "age": 27,
+    "email": "william.wright@example.com",
+    "password": "secretTopPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 27,
+    "isAdmin": false,
+    "name": "Penelope Parker",
+    "age": 31,
+    "email": "penelope.parker@example.com",
+    "password": "myTopSecret123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 28,
+    "isAdmin": false,
+    "name": "Benjamin Lewis",
+    "age": 29,
+    "email": "benjamin.lewis@example.com",
+    "password": "topSecretPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 29,
+    "isAdmin": false,
+    "name": "Camila Young",
+    "age": 24,
+    "email": "camila.young@example.com",
+    "password": "myTopSecretPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 30,
+    "isAdmin": false,
+    "name": "Henry Foster",
+    "age": 33,
+    "email": "henry.foster@example.com",
+    "password": "secretTopPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 31,
+    "isAdmin": false,
+    "name": "Sofia Hall",
+    "age": 26,
+    "email": "sofia.hall@example.com",
+    "password": "mySecretTopPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 32,
+    "isAdmin": false,
+    "name": "Aiden Hill",
+    "age": 34,
+    "email": "aiden.hill@example.com",
+    "password": "topSecretPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 33,
+    "isAdmin": false,
+    "name": "Evelyn Cox",
+    "age": 30,
+    "email": "evelyn.cox@example.com",
+    "password": "secureTopPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 34,
+    "isAdmin": false,
+    "name": "James Gray",
+    "age": 28,
+    "email": "james.gray@example.com",
+    "password": "mySecretTop123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 35,
+    "isAdmin": true,
+    "name": "Lucy Turner",
+    "age": 25,
+    "email": "lucy.turner@example.com",
+    "password": "topPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 36,
+    "isAdmin": false,
+    "name": "Michael Stewart",
+    "age": 27,
+    "email": "michael.stewart@example.com",
+    "password": "secretTopPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 37,
+    "isAdmin": false,
+    "name": "Aria Brooks",
+    "age": 31,
+    "email": "aria.brooks@example.com",
+    "password": "myTopSecret123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 38,
+    "isAdmin": false,
+    "name": "Mason Reed",
+    "age": 29,
+    "email": "mason.reed@example.com",
+    "password": "topSecretPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 39,
+    "isAdmin": false,
+    "name": "Luna Morris",
+    "age": 24,
+    "email": "luna.morris@example.com",
+    "password": "myTopSecretPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 40,
+    "isAdmin": false,
+    "name": "Logan Mitchell",
+    "age": 33,
+    "email": "logan.mitchell@example.com",
+    "password": "secretTopPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 41,
+    "isAdmin": false,
+    "name": "Avery Carter",
+    "age": 26,
+    "email": "avery.carter@example.com",
+    "password": "mySecretTopPassword",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 42,
+    "isAdmin": false,
+    "name": "Leo Coleman",
+    "age": 34,
+    "email": "leo.coleman@example.com",
+    "password": "topSecretPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  },
+  {
+    "id": 43,
+    "isAdmin": false,
+    "name": "Luna Price",
+    "age": 30,
+    "email": "luna.price@example.com",
+    "password": "secureTopPassword123",
+    "dateCreated": "2023-09-15T00:00:00.000Z"
+  }
+]
