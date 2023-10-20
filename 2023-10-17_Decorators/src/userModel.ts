@@ -28,7 +28,7 @@ export default class UserModel {
    */
   private users: User[] = [...USERS];
 
-  private constructor() {}
+  protected constructor() {}
 
   /**
    * @returns All the users of the Database

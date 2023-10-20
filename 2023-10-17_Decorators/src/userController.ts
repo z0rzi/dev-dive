@@ -1,13 +1,14 @@
 import type { Response } from "express";
 import { RequestWithUser } from "./middlewares";
 import UserModel, { User } from "./userModel";
+import { UserModelTimed } from "./userModelTimed";
+import { UserModelLogged } from "./userModelLogged";
+import { BodyHas, BodyHasNoMoreThan } from "./decorators";
 
 export class UserController {
-  model: UserModel;
-
-  constructor() {
-    this.model = UserModel.getInstance();
-  }
+  model: UserModel = new UserModelLogged(
+    new UserModelTimed(UserModel.getInstance())
+  );
 
   getAllUsers(_req: RequestWithUser, res: Response) {
     const allUsers = this.model.getAllUsers();
@@ -30,6 +31,11 @@ export class UserController {
     }
   }
 
+  @BodyHas('name', 'string')
+  @BodyHas('age', 'number')
+  @BodyHas('email', 'string')
+  @BodyHas('password', 'string')
+  @BodyHasNoMoreThan('name', 'age', 'email', 'password')
   createUser(req: RequestWithUser, res: Response) {
     const { name, age, email, password } = req.body;
 
@@ -38,6 +44,11 @@ export class UserController {
     res.status(201).send(user);
   }
 
+  @BodyHas('name', 'string', true)
+  @BodyHas('age', 'number', true)
+  @BodyHas('email', 'string', true)
+  @BodyHas('password', 'string', true)
+  @BodyHasNoMoreThan('name', 'age', 'email', 'password')
   updateUser(req: RequestWithUser, res: Response) {
     const newUser = req.body as Partial<User>;
 
