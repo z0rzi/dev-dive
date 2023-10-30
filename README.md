@@ -6,9 +6,9 @@ Each session will be divided in 3 parts:
 1. Before the session, at home
   Get familiar with the topic, read about it, watch videos, experiment
 2. First part of the session (1h)
- Informed discussion about the topic (what are the pros / cons? when / how to use it? ...)
-3. Second part of the session (1h)
  Coding kata around the topic
+3. Second part of the session (1h)
+ Presentation of the different kata solutions, discussion about the topic
 
 
 Disclaimers:
@@ -20,6 +20,10 @@ Disclaimers:
 
 ### Ideas for future events:
 - Use of LLMs in programming
+- Javascript under the hood
 - Functional programming VS OOP
-- Javascript performances and memory
+- Class factories
+- How to create and publish an open source library (with pip or npm)? 
+- Testing for voice or images?
+- Javascript performance and memory
 - The event loop
