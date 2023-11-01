@@ -1,3 +1,5 @@
 .obsidian/
+dist/
 node_modules/
 yarn.lock
+bun.lockb

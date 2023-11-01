@@ -1,0 +1,23 @@
+{
+  "name": "labyrinth",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/keypress": "^2.0.30",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "build": "bun build src/* --outdir dist",
+    "build:watch": "bun build src/* --outdir dist --watch"
+  },
+  "type": "module",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
+    "keypress": "^0.2.1",
+    "kleur": "^4.1.5",
+    "redux": "^4.2.1"
+  }
+}
