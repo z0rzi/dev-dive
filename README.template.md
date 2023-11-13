@@ -14,3 +14,17 @@ This week, we're going to talk about [[Main Topic]]!
 [[One sentence to motivate the reader to join the event (e.g. Join us for an exciting exploration about... , Come to discover how ...)]]
 
 🔬 **Learning steps :**
+
+
+---
+
+And this is the one I use for generating the katas:
+
+---
+
+I organize a bi-weekly meeting called DevDive, where we learn about a tech topic as a group.
+For our upcoming event, the focus is on [[Main Topic]]. I'm in need of a coding kata specifically tailored for this session.
+
+The ideal kata should strike a balance: it should present a level of complexity that keeps both junior and seasoned programmers engaged for about an hour. The goal is to offer a challenge that's approachable and stimulating for all experience levels. Looking forward to your creative and insightful suggestions
+
+Write the kata as it should be given to the students.
