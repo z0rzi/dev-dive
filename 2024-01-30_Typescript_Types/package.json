@@ -1,0 +1,21 @@
+{
+  "name": "2024-01-30_typescript_types",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "build": "bun build src/index.ts --outdir ./dist",
+    "build:watch": "bun build src/index.ts --watch --outdir ./dist",
+    "serve": "http-server -p 8080"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "bun": "^1.0.25",
+    "http-server": "^14.1.1"
+  }
+}
