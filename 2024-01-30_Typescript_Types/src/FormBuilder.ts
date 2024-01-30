@@ -1,39 +1,93 @@
+interface FieldBase {
+  label: string;
+}
+
+interface TextField extends FieldBase {
+  type: "text";
+  value?: string;
+}
+
+interface TextareaField extends FieldBase {
+  type: "textarea";
+  value?: string;
+}
+
+interface NumberField extends FieldBase {
+  type: "number";
+  value?: number;
+}
+
+interface CheckboxField extends FieldBase {
+  type: "checkbox";
+  value?: boolean;
+}
+
+interface SelectField extends FieldBase {
+  type: "select";
+  options: string[];
+  value?: string;
+}
+
+interface DateField extends FieldBase {
+  type: "date";
+  value?: Date;
+}
+
+interface RadioField extends FieldBase {
+  type: "radio";
+  value?: string;
+}
+
+type FieldType =
+  | TextField
+  | TextareaField
+  | NumberField
+  | CheckboxField
+  | SelectField
+  | DateField
+  | RadioField;
+
+type FormFieldDOM = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+
 /**
  * This class is used to build a form.
  */
-export default class FormBuilder {
+export default class FormBuilder<T extends Record<string, FieldType>> {
   /**
    * The options for the form.
    */
-  options = new Map();
+  options: T | null = null;
 
   /**
    * The callbacks that will be called when the form is submitted.
    */
   submitCallbacks = new Map();
 
-  constructor(private containerId: any) {}
-
-  /**
-   * Adds a field to the form.
-   *
-   * @param type The type of field to add.
-   * @param options The options for the field. Should contain a `type`, `label`, and optionally `value`.
-   */
-  addField(slug: any, options: any) {
-    this.options.set(slug, options);
+  constructor(private containerId: string, initialData: { fields: T }) {
+    this.options = initialData.fields;
     this.render();
   }
 
-  /**
-   * Removes a field from the form.
-   *
-   * @param slug The slug of the field to remove.
-   */
-  removeField(slug: any) {
-    this.options.delete(slug);
-    this.render();
-  }
+  // /**
+  //  * Adds a field to the form.
+  //  *
+  //  * @param type The type of field to add.
+  //  * @param options The options for the field. Should contain a `type`, `label`, and optionally `value`.
+  //  */
+  // addField(slug: string, options: FieldType) {
+  //   this.options.set(slug, options);
+  //   this.render();
+  // }
+
+  // /**
+  //  * Removes a field from the form.
+  //  *
+  //  * @param slug The slug of the field to remove.
+  //  */
+  // removeField(slug: string) {
+  //   this.options.delete(slug);
+  //   this.render();
+  // }
 
   /**
    * Gets the value of a field.
@@ -42,13 +96,24 @@ export default class FormBuilder {
    *
    * @returns The value of the field.
    */
-  getFieldValue(slug: any) {
-    const field = this.options.get(slug);
-    const fieldElement = document.getElementById(slug) as any;
+  getFieldValue<
+    K extends keyof T,
+    U extends T[K] extends { type: "number" }
+      ? number
+      : T[K] extends { type: "checkbox" }
+      ? boolean
+      : T[K] extends { type: "date" }
+      ? Date
+      : string
+  >(slug: K): U | null {
+    const field = this.options?.[slug];
+    const fieldElement = document.getElementById(
+      slug.toString()
+    ) as FormFieldDOM | null;
 
     const rawValue = fieldElement?.value;
 
-    if (!rawValue) {
+    if (!rawValue || !field) {
       return null;
     }
 
@@ -65,7 +130,7 @@ export default class FormBuilder {
         value = +rawValue;
         break;
       case "checkbox":
-        value = fieldElement!.checked;
+        value = (fieldElement as HTMLInputElement).checked;
         break;
       case "select":
         value = rawValue;
@@ -81,16 +146,23 @@ export default class FormBuilder {
     return value;
   }
 
-  setFieldValue(slug: any, value: any) {
-    const fieldElement = document.getElementById(slug) as any;
-    fieldElement!.value = value;
+  setFieldValue(slug: keyof T, value: T[keyof T]["value"]) {
+    const fieldElement = document.getElementById(
+      slug.toString()
+    ) as FormFieldDOM | null;
+
+    if (!fieldElement) {
+      return;
+    }
+
+    fieldElement.value = value?.toString() || "";
   }
 
   /**
    * The callback will be called when the form is submitted.
    * It will be called with a map of the values of the form. (key => value)
    */
-  onFormSubmit(callback: any) {
+  onFormSubmit(callback: (fields: Map<keyof T, T[keyof T]["value"]>) => void) {
     let id = 0;
 
     while (this.submitCallbacks.has(id)) {
@@ -107,18 +179,22 @@ export default class FormBuilder {
   }
 
   triggerFormSubmit() {
-    const values = new Map();
+    const values = new Map<keyof T, T[keyof T]["value"] | null>();
 
-    for (const [slug, field] of this.options) {
+    Object.keys(this.options || {}).forEach((slug) => {
       values.set(slug, this.getFieldValue(slug));
-    }
+    });
+
+    // for (const [slug, field] of this.options) {
+    //   values.set(slug, this.getFieldValue(slug));
+    // }
 
     for (const [_, callback] of this.submitCallbacks) {
       callback(values);
     }
   }
 
-  private instanciateField(slug: any, field: any) {
+  private instanciateField(slug: keyof T, field: FieldType) {
     const fieldType = field.type;
 
     let fieldElement;
@@ -129,8 +205,7 @@ export default class FormBuilder {
         break;
 
       case "textarea":
-        fieldElement = document.createElement("input");
-        fieldElement.type = "textarea";
+        fieldElement = document.createElement("textarea");
         break;
 
       case "number":
@@ -166,10 +241,10 @@ export default class FormBuilder {
         break;
     }
 
-    fieldElement!.id = slug;
+    fieldElement.id = slug.toString();
 
     if (field.value) {
-      fieldElement!.value = field.value;
+      fieldElement.value = field.value.toString();
     }
 
     return fieldElement;
@@ -182,7 +257,13 @@ export default class FormBuilder {
     const container = document.getElementById(this.containerId);
     container!.innerHTML = "";
 
-    for (const [key, field] of this.options) {
+    Object.keys(this.options || {}).forEach((key) => {
+      const field = this.options?.[key];
+
+      if (!field) {
+        return;
+      }
+
       const fieldElement = this.instanciateField(key, field);
 
       // Adding the label
@@ -197,7 +278,7 @@ export default class FormBuilder {
       fieldContainer.appendChild(fieldElement!);
 
       container!.appendChild(fieldContainer);
-    }
+    });
 
     // Adding the submit button
     const submitButton = document.createElement("button");
