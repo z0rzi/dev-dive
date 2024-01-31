@@ -60,27 +60,6 @@ export default class FormBuilder<T extends Record<string, FieldType>> {
     this.render();
   }
 
-  // /**
-  //  * Adds a field to the form.
-  //  *
-  //  * @param type The type of field to add.
-  //  * @param options The options for the field. Should contain a `type`, `label`, and optionally `value`.
-  //  */
-  // addField(slug: string, options: FieldType) {
-  //   this.options.set(slug, options);
-  //   this.render();
-  // }
-
-  // /**
-  //  * Removes a field from the form.
-  //  *
-  //  * @param slug The slug of the field to remove.
-  //  */
-  // removeField(slug: string) {
-  //   this.options.delete(slug);
-  //   this.render();
-  // }
-
   /**
    * Gets the value of a field.
    *
@@ -158,10 +137,6 @@ export default class FormBuilder<T extends Record<string, FieldType>> {
     Object.keys(this.options || {}).forEach((slug) => {
       values.set(slug, this.getFieldValue(slug));
     });
-
-    // for (const [slug, field] of this.options) {
-    //   values.set(slug, this.getFieldValue(slug));
-    // }
 
     for (const [_, callback] of this.submitCallbacks) {
       callback(values);
