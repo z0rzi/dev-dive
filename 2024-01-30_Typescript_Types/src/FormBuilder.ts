@@ -1,42 +1,34 @@
-interface FieldBase {
+interface FieldTypeToValueType {
+  text: string;
+  textarea: string;
+  number: number;
+  date: Date;
+  select: string;
+  checkbox: boolean;
+  radio: string;
+}
+
+interface FieldBase<T extends keyof FieldTypeToValueType> {
   label: string;
+  type: T;
+  value?: FieldTypeToValueType[T];
 }
 
-interface TextField extends FieldBase {
-  type: "text";
-  value?: string;
-}
+interface TextField extends FieldBase<"text"> {}
 
-interface TextareaField extends FieldBase {
-  type: "textarea";
-  value?: string;
-}
+interface TextareaField extends FieldBase<"textarea"> {}
 
-interface NumberField extends FieldBase {
-  type: "number";
-  value?: number;
-}
+interface NumberField extends FieldBase<"number"> {}
 
-interface CheckboxField extends FieldBase {
-  type: "checkbox";
-  value?: boolean;
-}
+interface CheckboxField extends FieldBase<"checkbox"> {}
 
-interface SelectField extends FieldBase {
-  type: "select";
+interface SelectField extends FieldBase<"select"> {
   options: string[];
-  value?: string;
 }
 
-interface DateField extends FieldBase {
-  type: "date";
-  value?: Date;
-}
+interface DateField extends FieldBase<"date"> {}
 
-interface RadioField extends FieldBase {
-  type: "radio";
-  value?: string;
-}
+interface RadioField extends FieldBase<"radio"> {}
 
 type FieldType =
   | TextField
@@ -96,16 +88,9 @@ export default class FormBuilder<T extends Record<string, FieldType>> {
    *
    * @returns The value of the field.
    */
-  getFieldValue<
-    K extends keyof T,
-    U extends T[K] extends { type: "number" }
-      ? number
-      : T[K] extends { type: "checkbox" }
-      ? boolean
-      : T[K] extends { type: "date" }
-      ? Date
-      : string
-  >(slug: K): U | null {
+  getFieldValue<K extends keyof T>(
+    slug: K
+  ): FieldTypeToValueType[T[K]["type"]] | null {
     const field = this.options?.[slug];
     const fieldElement = document.getElementById(
       slug.toString()
@@ -117,36 +102,25 @@ export default class FormBuilder<T extends Record<string, FieldType>> {
       return null;
     }
 
-    let value;
+    let value: FieldTypeToValueType[T[K]["type"]];
 
-    switch (field.type) {
-      case "text":
-        value = rawValue;
-        break;
-      case "textarea":
-        value = rawValue;
-        break;
-      case "number":
-        value = +rawValue;
-        break;
-      case "checkbox":
-        value = (fieldElement as HTMLInputElement).checked;
-        break;
-      case "select":
-        value = rawValue;
-        break;
-      case "date":
-        value = new Date(rawValue);
-        break;
-      case "radio":
-        value = rawValue;
-        break;
-    }
+    value = {
+      text: rawValue,
+      textarea: rawValue,
+      number: +rawValue,
+      checkbox: (fieldElement as HTMLInputElement).checked,
+      select: rawValue,
+      date: new Date(rawValue),
+      radio: rawValue,
+    }[field.type] as FieldTypeToValueType[T[K]["type"]];
 
-    return value;
+    return value ?? null;
   }
 
-  setFieldValue(slug: keyof T, value: T[keyof T]["value"]) {
+  setFieldValue<K extends keyof T>(
+    slug: K,
+    value: FieldTypeToValueType[T[K]["type"]]
+  ) {
     const fieldElement = document.getElementById(
       slug.toString()
     ) as FormFieldDOM | null;
