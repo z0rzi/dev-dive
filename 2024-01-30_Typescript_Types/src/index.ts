@@ -2,30 +2,31 @@ import FormBuilder from "./FormBuilder";
 
 // waiting until document is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  const builder = new FormBuilder("form-container");
-
-  builder.addField("name", {
-    type: "text",
-    label: "Name",
+  const builder = new FormBuilder("form-container", {
+    fields: {
+      name: {
+        type: "text",
+        label: "Name",
+      },
+      age: {
+        type: "number",
+        label: "Age",
+        value: 18,
+      },
+      email: {
+        type: "text",
+        label: "Email",
+      },
+      "date-of-birth": {
+        type: "date",
+        label: "Date of Birth",
+      },
+    },
   });
 
-  builder.addField("age", {
-    type: "number",
-    label: "Age",
-    value: "18",
-  });
+  const d = builder.getFieldValue("date-of-birth");
 
-  builder.addField("email", {
-    type: "text",
-    label: "Email",
-  });
-
-  builder.addField("date-of-birth", {
-    type: "date",
-    label: "Date of Birth",
-  });
-
-  builder.onFormSubmit((fields: any) => {
+  builder.onFormSubmit((fields) => {
     console.log(fields);
   });
 
