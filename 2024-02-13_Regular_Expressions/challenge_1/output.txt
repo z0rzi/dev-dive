@@ -1,0 +1,3 @@
+https://www.example.com/lorem/ipsum/dolor
+https://www.example.com/lorem-ipsum/dolor/sit/amet
+https://www.example.com/lorem/ipsum/dolor/sit/amet/12345/67890

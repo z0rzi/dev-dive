@@ -19,11 +19,13 @@ Disclaimers:
 ---
 
 ### Ideas for future events:
+- How does Linting work???
+- Regular Expressions
+- Recursion
 - Use of LLMs in programming
 - Javascript under the hood
 - Functional programming VS OOP
 - Class factories
+- Flaky testing
 - How to create and publish an open source library (with pip or npm)? 
-- Testing for voice or images?
 - Javascript performance and memory
-- The event loop

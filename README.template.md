@@ -22,9 +22,15 @@ And this is the one I use for generating the katas:
 
 ---
 
-I organize a bi-weekly meeting called DevDive, where we learn about a tech topic as a group.
+I organize a bi-weekly meeting called DevDive, where we practice a technical topic as a group.
 For our upcoming event, the focus is on [[Main Topic]]. I'm in need of a coding kata specifically tailored for this session.
 
-The ideal kata should strike a balance: it should present a level of complexity that keeps both junior and seasoned programmers engaged for about an hour. The goal is to offer a challenge that's approachable and stimulating for all experience levels. Looking forward to your creative and insightful suggestions
+Write a kata which can be cnallenging for both beginners and experienced developers. The challenge should be approachable and stimulating for all experience levels.
+It should take around an hour to complete the kata.
+
+The kata should be divided in different challenges, each one building on the previous one, and increasing in difficulty.
+The challenges should cover different aspects of the topic.
 
 Write the kata as it should be given to the students.
+Write your answer in Markdown format.
+Give code examples and explanations where necessary.
