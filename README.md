@@ -20,7 +20,6 @@ Disclaimers:
 
 ### Ideas for future events:
 - How does Linting work???
-- Regular Expressions
 - Recursion
 - Use of LLMs in programming
 - Javascript under the hood
@@ -29,3 +28,6 @@ Disclaimers:
 - Flaky testing
 - How to create and publish an open source library (with pip or npm)? 
 - Javascript performance and memory
+- Different type systems in different languages, why do they work the way they do?
+- Builder patterns
+- Low level networking (bytes, packages, ...)
