@@ -21,7 +21,7 @@ Welcome to the DevDive Recursion Kata! In this kata, we will explore the concept
 
 ## Challenge 1: Max( Array )
 
-Write a recursive function `max(n)` that finds the maximum value in an array of number.
+Write a recursive function `max(n)` that finds the maximum value in an array of numbers.
 
 Example:
 
@@ -49,6 +49,7 @@ More examples:
 
 ```typescript
 countdown(-2)(+1); // returns [ 2, 0 ] This can also go forward, skipping a step
+countdown(-2)(-1); // returns [ 2, 2, 1, 0 ] 
 countdown(-5)()()()()(); // returns [ 5, 4, 3, 2, 1, 0 ]
 countdown(-5)(+2)()(); // returns [ 5, 2, 1, 0 ] This skips two steps
 countdown(-5)()(+2)(); // returns [ 5, 4, 1, 0 ] This skips two steps
