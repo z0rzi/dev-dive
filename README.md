@@ -19,11 +19,15 @@ Disclaimers:
 ---
 
 ### Ideas for future events:
+- How does Linting work???
+- Recursion
 - Use of LLMs in programming
 - Javascript under the hood
 - Functional programming VS OOP
 - Class factories
+- Flaky testing
 - How to create and publish an open source library (with pip or npm)? 
-- Testing for voice or images?
 - Javascript performance and memory
-- The event loop
+- Different type systems in different languages, why do they work the way they do?
+- Builder patterns
+- Low level networking (bytes, packages, ...)
