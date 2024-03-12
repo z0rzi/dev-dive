@@ -165,18 +165,8 @@ async function runScript(sequence: string) {
     return;
   }
 
-  // const subCommands = (RUN_SCRIPT_CMD + ' ' + sequence).split("&&").map((cmd) => cmd.trim());
-  // const subCommands = [RUN_SCRIPT_CMD + " " + sequence];
-  //
-  // for (const command of subCommands) {
-  //   websocket?.send(`${command}`);
-  //   const success = await runOneCommand(command);
-  //   if (!success) {
-  //     return;
-  //   }
-  // }
-  //
-  const cmdParts = (RUN_SCRIPT_CMD + ' ' + sequence).split(" ");
+  const cmdParts = (RUN_SCRIPT_CMD).split(" ");
+  cmdParts.push('"' + sequence.trim() + '"');
   const mainCmd = cmdParts.shift();
   if (mainCmd === undefined) {
     throw new Error("Invalid command");
