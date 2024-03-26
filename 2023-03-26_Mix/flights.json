@@ -1,0 +1,134 @@
+[
+  {
+    "from": "SIN",
+    "to": "CAN",
+    "date": "2024-01-01T05:20:00.000Z",
+    "durationInMins": 281
+  },
+  {
+    "from": "BKK",
+    "to": "BRU",
+    "date": "2024-01-01T18:58:00.000Z",
+    "durationInMins": 444
+  },
+  {
+    "from": "CAN",
+    "to": "BKK",
+    "date": "2024-01-01T10:49:00.000Z",
+    "durationInMins": 312
+  },
+  {
+    "from": "SIN",
+    "to": "LAX",
+    "date": "2024-01-13T08:43:00.000Z",
+    "durationInMins": 445
+  },
+  {
+    "from": "BRU",
+    "to": "CAN",
+    "date": "2024-01-04T00:33:00.000Z",
+    "durationInMins": 364
+  },
+  {
+    "from": "FRA",
+    "to": "CAN",
+    "date": "2024-01-11T21:43:00.000Z",
+    "durationInMins": 119
+  },
+  {
+    "from": "FRA",
+    "to": "SIN",
+    "date": "2024-01-01T00:09:00.000Z",
+    "durationInMins": 69
+  },
+  {
+    "from": "CAN",
+    "to": "BRU",
+    "date": "2024-01-23T15:56:00.000Z",
+    "durationInMins": 213
+  },
+  {
+    "from": "SIN",
+    "to": "BRU",
+    "date": "2024-01-19T10:47:00.000Z",
+    "durationInMins": 69
+  },
+  {
+    "from": "BKK",
+    "to": "FRA",
+    "date": "2024-01-02T18:33:00.000Z",
+    "durationInMins": 327
+  },
+  {
+    "from": "FRA",
+    "to": "SIN",
+    "date": "2024-01-29T01:09:00.000Z",
+    "durationInMins": 549
+  },
+  {
+    "from": "SIN",
+    "to": "HND",
+    "date": "2024-01-18T22:44:00.000Z",
+    "durationInMins": 394
+  },
+  {
+    "from": "CDG",
+    "to": "HND",
+    "date": "2024-01-12T08:10:00.000Z",
+    "durationInMins": 497
+  },
+  {
+    "from": "SIN",
+    "to": "CAN",
+    "date": "2024-01-29T05:35:00.000Z",
+    "durationInMins": 239
+  },
+  {
+    "from": "CAN",
+    "to": "SIN",
+    "date": "2024-01-27T21:23:00.000Z",
+    "durationInMins": 487
+  },
+  {
+    "from": "CDG",
+    "to": "BKK",
+    "date": "2024-01-12T18:20:00.000Z",
+    "durationInMins": 181
+  },
+  {
+    "from": "CAN",
+    "to": "FRA",
+    "date": "2024-01-26T15:51:00.000Z",
+    "durationInMins": 422
+  },
+  {
+    "from": "LAX",
+    "to": "BKK",
+    "date": "2024-01-05T17:58:00.000Z",
+    "durationInMins": 387
+  },
+  {
+    "from": "HND",
+    "to": "SIN",
+    "date": "2024-01-13T20:08:00.000Z",
+    "durationInMins": 557
+  },
+  {
+    "from": "CDG",
+    "to": "SIN",
+    "date": "2024-01-27T22:56:00.000Z",
+    "durationInMins": 505
+  },
+  {
+    "from": "BRU",
+    "to": "LAX",
+    "date": "2024-01-01T15:03:00.000Z",
+    "durationInMins": 453
+  },
+  {
+    "from": "LAX",
+    "to": "PVG",
+    "date": "2024-01-28T09:36:00.000Z",
+    "durationInMins": 225
+  }
+]
