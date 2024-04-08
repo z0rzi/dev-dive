@@ -19,15 +19,32 @@ Disclaimers:
 ---
 
 ### Ideas for future events:
-- How does Linting work???
-- Recursion
-- Use of LLMs in programming
-- Javascript under the hood
-- Functional programming VS OOP
-- Class factories
-- Flaky testing
-- How to create and publish an open source library (with pip or npm)? 
-- Javascript performance and memory
-- Different type systems in different languages, why do they work the way they do?
-- Builder patterns
-- Low level networking (bytes, packages, ...)
+
+Sum of big big big numbers
+
+Encription of a list of numbers.
+
+Code compiler
+
+Self generating code
+
+Given a string, give all the possible passwords created with this string (with every char used once)
+
+Roman number calculator
+
+Alphabetical sort
+
+Find hamming number
+A Hamming number is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.
+Write a function that computes the nth smallest Hamming number.
+
+Specifically:
+The first  smallest Hamming number is 1 = 2^0 * 3^0 * 5^0
+The second smallest Hamming number is 2 = 2^1 * 3^0 * 5^0
+The third  smallest Hamming number is 3 = 2^0 * 3^1 * 5^0
+The fourth smallest Hamming number is 4 = 2^2 * 3^0 * 5^0
+The fifth  smallest Hamming number is 5 = 2^0 * 3^0 * 5^1
+...
+
+Your code should be able to compute the first 5 000 Hamming numbers without timing out.
+
