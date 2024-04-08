@@ -1,0 +1,9 @@
+{
+  "name": "2024-03-12_robot_path",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun": "latest"
+  }
+}
