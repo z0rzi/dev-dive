@@ -1,0 +1,99 @@
+<style>
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body {
+    background: #f4f4f4;
+    font-family: monospace;
+  }
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  #logs {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f4f4f4;
+    flex-grow: 1;
+    font-family: monospace;
+    overflow-y: auto;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  input {
+    font-family: monospace;
+  }
+
+  input.sequence {
+    width: 80%;
+  }
+
+  button {
+    width: 19%;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .canvas {
+    height: 800px;
+    width: 800px;
+  }
+</style>
+
+<div class="container flex">
+  <div class="content">
+    <div>
+      <label>CWD:</label>
+      <input
+        type="text"
+        class="cwd"
+        style="width: 500px"
+      />
+    </div>
+    <div>
+      <label>Command to run your script:</label>
+      <input
+        type="text"
+        placeholder="node ./robot.js"
+        value="node ./robot.js"
+        class="command"
+      />
+    </div>
+    <br />
+    <div class="flex-row">
+      <input type="text" placeholder="Your sequence" class="sequence" />
+      <button>Run sequence</button>
+    </div>
+    <div class="canvas">
+      <canvas id="canvas" height="800" width="800"></canvas>
+    </div>
+  </div>
+  <div id="logs"></div>
+</div>

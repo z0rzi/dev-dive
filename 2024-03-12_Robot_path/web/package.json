@@ -1,0 +1,14 @@
+{
+  "name": "web",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun serve.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "dependencies": {
+    "bun": "^1.0.30"
+  }
+}
