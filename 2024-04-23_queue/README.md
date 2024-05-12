@@ -13,7 +13,7 @@ You are the last one in the line, calculate how many people you can see.
 ```
 countSeeablePeople([10, 3, 4, 5, 6, 10, 9]) // => 5
 countSeeablePeople([6, 6, 5, 5, 5, 6, 5]) // => 1
-countSeeablePeople([6, 5, 4, 5, 5, 6, 5, 10]) // => 5
+countSeeablePeople([6, 5, 4, 5, 5, 6, 5, 10]) // => 2
 ```
 
 # Challenge 2 - More accuracy

@@ -20,19 +20,42 @@ Disclaimers:
 
 ### Ideas for future events:
 
+Date range selector, possibility to:
+- Set min / max
+- Select start date / end date
+- Keep the duration fixed (e.g. should always be one year)
+- Stick to start / end (should follow maximas)
+- Checkbox - only labor days
+
+---
+
 Sum of big big big numbers
+
+---
 
 Encription of a list of numbers.
 
+---
+
 Code compiler
+
+---
 
 Self generating code
 
+---
+
 Given a string, give all the possible passwords created with this string (with every char used once)
+
+---
 
 Roman number calculator
 
+---
+
 Alphabetical sort
+
+---
 
 Find hamming number
 A Hamming number is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.
